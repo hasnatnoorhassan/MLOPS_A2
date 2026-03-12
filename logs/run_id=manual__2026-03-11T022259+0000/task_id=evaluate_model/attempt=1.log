@@ -1,0 +1,24 @@
+[2026-03-11T07:24:22.526+0500] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mlops_titanic_pipeline.evaluate_model manual__2026-03-11T02:22:59+00:00 [queued]>
+[2026-03-11T07:24:22.544+0500] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mlops_titanic_pipeline.evaluate_model manual__2026-03-11T02:22:59+00:00 [queued]>
+[2026-03-11T07:24:22.545+0500] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-03-11T07:24:22.599+0500] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): evaluate_model> on 2026-03-11 02:22:59+00:00
+[2026-03-11T07:24:22.618+0500] {standard_task_runner.py:60} INFO - Started process 12366 to run task
+[2026-03-11T07:24:22.634+0500] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'mlops_titanic_pipeline', 'evaluate_model', 'manual__2026-03-11T02:22:59+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/mlops_airflow_mlflow_pipeline.py', '--cfg-path', '/tmp/tmpir4kbiw3']
+[2026-03-11T07:24:22.636+0500] {standard_task_runner.py:88} INFO - Job 91: Subtask evaluate_model
+[2026-03-11T07:24:22.758+0500] {task_command.py:423} INFO - Running <TaskInstance: mlops_titanic_pipeline.evaluate_model manual__2026-03-11T02:22:59+00:00 [running]> on host DESKTOP-QSRKUG3.localdomain
+[2026-03-11T07:24:23.251+0500] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hasnat_Noor' AIRFLOW_CTX_DAG_ID='mlops_titanic_pipeline' AIRFLOW_CTX_TASK_ID='evaluate_model' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T02:22:59+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T02:22:59+00:00'
+[2026-03-11T07:24:23.252+0500] {logging_mixin.py:188} INFO - ==================================================
+[2026-03-11T07:24:23.252+0500] {logging_mixin.py:188} INFO - TASK 7: MODEL EVALUATION
+[2026-03-11T07:24:23.253+0500] {logging_mixin.py:188} INFO - ==================================================
+[2026-03-11T07:24:23.609+0500] {migration.py:216} INFO - Context impl SQLiteImpl.
+[2026-03-11T07:24:23.609+0500] {migration.py:219} INFO - Will assume non-transactional DDL.
+[2026-03-11T07:24:23.682+0500] {logging_mixin.py:188} INFO - Accuracy:  0.7765
+[2026-03-11T07:24:23.682+0500] {logging_mixin.py:188} INFO - Precision: 0.8269
+[2026-03-11T07:24:23.683+0500] {logging_mixin.py:188} INFO - Recall:    0.5811
+[2026-03-11T07:24:23.683+0500] {logging_mixin.py:188} INFO - F1-Score:  0.6825
+[2026-03-11T07:24:23.889+0500] {logging_mixin.py:188} INFO - 
+All metrics logged to MLflow ✓
+[2026-03-11T07:24:23.927+0500] {python.py:201} INFO - Done. Returned value was: None
+[2026-03-11T07:24:23.942+0500] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=mlops_titanic_pipeline, task_id=evaluate_model, execution_date=20260311T022259, start_date=20260311T022422, end_date=20260311T022423
+[2026-03-11T07:24:24.056+0500] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-03-11T07:24:24.114+0500] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

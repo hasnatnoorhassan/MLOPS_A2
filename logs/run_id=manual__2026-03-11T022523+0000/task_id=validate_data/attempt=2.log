@@ -1,0 +1,23 @@
+[2026-03-11T07:25:57.302+0500] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mlops_titanic_pipeline.validate_data manual__2026-03-11T02:25:23+00:00 [queued]>
+[2026-03-11T07:25:57.310+0500] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mlops_titanic_pipeline.validate_data manual__2026-03-11T02:25:23+00:00 [queued]>
+[2026-03-11T07:25:57.311+0500] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2026-03-11T07:25:57.336+0500] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): validate_data> on 2026-03-11 02:25:23+00:00
+[2026-03-11T07:25:57.343+0500] {standard_task_runner.py:60} INFO - Started process 12487 to run task
+[2026-03-11T07:25:57.350+0500] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'mlops_titanic_pipeline', 'validate_data', 'manual__2026-03-11T02:25:23+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/mlops_airflow_mlflow_pipeline.py', '--cfg-path', '/tmp/tmp21l2on3x']
+[2026-03-11T07:25:57.351+0500] {standard_task_runner.py:88} INFO - Job 96: Subtask validate_data
+[2026-03-11T07:25:57.431+0500] {task_command.py:423} INFO - Running <TaskInstance: mlops_titanic_pipeline.validate_data manual__2026-03-11T02:25:23+00:00 [running]> on host DESKTOP-QSRKUG3.localdomain
+[2026-03-11T07:25:57.716+0500] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hasnat_Noor' AIRFLOW_CTX_DAG_ID='mlops_titanic_pipeline' AIRFLOW_CTX_TASK_ID='validate_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T02:25:23+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T02:25:23+00:00'
+[2026-03-11T07:25:57.718+0500] {logging_mixin.py:188} INFO - ==================================================
+[2026-03-11T07:25:57.719+0500] {logging_mixin.py:188} INFO - TASK 3: DATA VALIDATION
+[2026-03-11T07:25:57.719+0500] {logging_mixin.py:188} INFO - ==================================================
+[2026-03-11T07:25:57.719+0500] {logging_mixin.py:188} INFO - Current attempt: 2
+[2026-03-11T07:25:57.720+0500] {logging_mixin.py:188} INFO - Attempt 2: Proceeding with real validation...
+[2026-03-11T07:25:57.749+0500] {logging_mixin.py:188} INFO - Age missing:      19.87%
+[2026-03-11T07:25:57.750+0500] {logging_mixin.py:188} INFO - Embarked missing: 0.22%
+[2026-03-11T07:25:57.750+0500] {logging_mixin.py:188} INFO - 
+Validation PASSED ✓
+[2026-03-11T07:25:57.751+0500] {logging_mixin.py:188} INFO - All columns within acceptable missing value range.
+[2026-03-11T07:25:57.751+0500] {python.py:201} INFO - Done. Returned value was: None
+[2026-03-11T07:25:57.758+0500] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=mlops_titanic_pipeline, task_id=validate_data, execution_date=20260311T022523, start_date=20260311T022557, end_date=20260311T022557
+[2026-03-11T07:25:57.845+0500] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-03-11T07:25:57.902+0500] {taskinstance.py:3280} INFO - 2 downstream tasks scheduled from follow-on schedule check

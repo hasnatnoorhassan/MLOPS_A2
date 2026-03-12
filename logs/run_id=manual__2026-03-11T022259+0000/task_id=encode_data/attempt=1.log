@@ -1,0 +1,25 @@
+[2026-03-11T07:23:58.867+0500] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mlops_titanic_pipeline.encode_data manual__2026-03-11T02:22:59+00:00 [queued]>
+[2026-03-11T07:23:58.883+0500] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mlops_titanic_pipeline.encode_data manual__2026-03-11T02:22:59+00:00 [queued]>
+[2026-03-11T07:23:58.884+0500] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-03-11T07:23:58.915+0500] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): encode_data> on 2026-03-11 02:22:59+00:00
+[2026-03-11T07:23:58.927+0500] {standard_task_runner.py:60} INFO - Started process 12324 to run task
+[2026-03-11T07:23:58.936+0500] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'mlops_titanic_pipeline', 'encode_data', 'manual__2026-03-11T02:22:59+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/mlops_airflow_mlflow_pipeline.py', '--cfg-path', '/tmp/tmp12xs2qs0']
+[2026-03-11T07:23:58.937+0500] {standard_task_runner.py:88} INFO - Job 89: Subtask encode_data
+[2026-03-11T07:23:59.026+0500] {task_command.py:423} INFO - Running <TaskInstance: mlops_titanic_pipeline.encode_data manual__2026-03-11T02:22:59+00:00 [running]> on host DESKTOP-QSRKUG3.localdomain
+[2026-03-11T07:23:59.550+0500] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hasnat_Noor' AIRFLOW_CTX_DAG_ID='mlops_titanic_pipeline' AIRFLOW_CTX_TASK_ID='encode_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T02:22:59+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T02:22:59+00:00'
+[2026-03-11T07:23:59.552+0500] {logging_mixin.py:188} INFO - ==================================================
+[2026-03-11T07:23:59.552+0500] {logging_mixin.py:188} INFO - TASK 5: DATA ENCODING
+[2026-03-11T07:23:59.552+0500] {logging_mixin.py:188} INFO - ==================================================
+[2026-03-11T07:23:59.612+0500] {logging_mixin.py:188} INFO - Columns before encoding: ['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked', 'FamilySize', 'IsAlone']
+[2026-03-11T07:23:59.617+0500] {logging_mixin.py:188} INFO - 
+Sex encoded:      [1 0]
+[2026-03-11T07:23:59.618+0500] {logging_mixin.py:188} INFO - Embarked encoded: [2 0 1]
+[2026-03-11T07:23:59.620+0500] {logging_mixin.py:188} INFO - 
+Columns after encoding & dropping: ['Survived', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Embarked', 'FamilySize', 'IsAlone']
+[2026-03-11T07:23:59.622+0500] {logging_mixin.py:188} INFO - Final shape: (891, 10)
+[2026-03-11T07:23:59.663+0500] {logging_mixin.py:188} INFO - 
+Saved to: /home/hamza/mlops_assignment2/data/titanic_encoded.csv
+[2026-03-11T07:23:59.663+0500] {python.py:201} INFO - Done. Returned value was: None
+[2026-03-11T07:23:59.673+0500] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=mlops_titanic_pipeline, task_id=encode_data, execution_date=20260311T022259, start_date=20260311T022358, end_date=20260311T022359
+[2026-03-11T07:23:59.754+0500] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-03-11T07:23:59.808+0500] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
